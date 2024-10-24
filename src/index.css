@@ -4,7 +4,7 @@
 
 @layer base {
   html {
-    @apply bg-slate-200;
+    @apply bg-white;
   }
 
   body {
@@ -28,4 +28,5 @@
   ul>li {
     @apply py-4
   }
+
 }

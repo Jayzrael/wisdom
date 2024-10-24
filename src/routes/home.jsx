@@ -1,26 +1,33 @@
 import React, { useState } from 'react';
 import Header from '../components/header';
+import AnimatedText from '../components/animatedText';
+import Button from '../components/Button';
+
 
 const Home = () => {
 
   return (
     <main className='overflow-hidden'>
       <Header />
-      <section className='max-lg:mt-5 mt-2'>
-        <div className="container flex flex-row-reverse justify-center items-center">
-          <img className='max-lg:hidden' src="/images/hero.svg" alt="" width={500} />
-          <div>
-            <h1 className='text-4xl font-bold max-lg:text-2xl'>The Ultimate online learning experience with just a few clicks? Say Hello to Wisdom!</h1>
-            <p className='my-4'>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum, labore neque. Nisi incidunt obcaecati ipsum?
-            </p>
-            <button className='bg-blue-900 text-white py-2 px-4 rounded-[12px] border-none'>
-              Contact Us
-            </button>
-          </div>
-
+      <section className='flex flex-col justify-center items-center gap-4 max-lg:mt-5 mt-20'>
+        <AnimatedText />
+        <div>
+          <Button Class="bg-purple-900 hover:bg-purple-950 py-4 px-10 rounded-md text-xl text-white" Text="GET STARTED" />
+        </div>
+        <p className='text-xl font-semibold mb-10'>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+      </section>
+      <section className='mb-10'>
+        <div className='container flex justify-center items-center'>
+          <video src="/videos/video1.mp4" width="900" height="600" muted loop autoPlay className='rounded-lg' />
         </div>
       </section>
+      <section className='mb-10'>
+        <div className='container'>
+          <h1 className='text-center font-bold text-4xl max-lg:text-2xl'>Lorem ipsum dolor sit amet  Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae earum ab harum.</h1>
+        </div>
+      </section>
+
+
     </main>
   );
 }
