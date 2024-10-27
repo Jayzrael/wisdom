@@ -54,7 +54,7 @@ const AnimatedText = () => {
           Where
         </span>
         <span
-          className={`inline-block text-4xl max-lg:text-6xl font-bold mx-2 transition-transform duration-500 ease-in-out text-purple-900 ${isSliding ? 'translate-y-[-100%] opacity-0' : 'translate-y-[0] opacity-100'
+          className={`inline-block text-4xl max-lg:text-6xl font-bold mx-2 transition-transform duration-500 ease-in-out text-[#9403C5] ${isSliding ? 'translate-y-[-100%] opacity-0' : 'translate-y-[0] opacity-100'
             }`}
         >
           {words[currentWordIndex]}
