@@ -3,13 +3,17 @@ import Header from '../components/header';
 import AnimatedText from '../components/animatedText';
 import Button from '../components/Button';
 import { RiShakeHandsLine } from 'react-icons/ri';
-import { BsFileSpreadsheet } from 'react-icons/bs';
+import { BsFileSpreadsheet, BsTwitterX } from 'react-icons/bs';
 import { HiOutlineHome, HiOutlineShoppingCart } from 'react-icons/hi';
 import ScrollSpyLayout from '../components/animatedSection';
 import VideoText from '../components/VideoText';
 import { CardList, VideoList } from '../components/lists';
 import CurvedContainer from '../components/CurvedSection';
 import CardBox from '../components/card';
+import { TiSocialLinkedin } from 'react-icons/ti';
+import { SlSocialInstagram } from 'react-icons/sl';
+import { FaFacebook, FaTiktok } from 'react-icons/fa';
+import { IoLogoYoutube } from 'react-icons/io';
 
 
 const Home = () => {
@@ -81,13 +85,24 @@ const Home = () => {
           ))}
         </div>
       </section>
-      <section className='bg-[#4A154B] mb-40 py-24 rounded-curve-b max-lg:rounded-none'>
+      <section className='bg-[#4A154B] py-24 rounded-curve-b max-lg:rounded-none'>
         <div className='flex flex-col gap-10 justify-center items-center text-white'>
           <h1 className='text-5xl font-bold mt-10 max-lg:text-center'>See all you can accomplish in Wisdom.</h1>
           <div className='flex max-lg:flex-col gap-4 max-lg:w-full max-lg:px-8'>
             <button className='bg-white text-[#4A154B] py-3 px-7'>GET STARTED</button>
             <button className='bg-transparent border-white border py-3 px-7'>CONTACT US</button>
           </div>
+        </div>
+      </section>
+      <section className='flex justify-between mt-10 mb-10 px-10'>
+        <h1 className='text-xl'>Visit our pages</h1>
+        <div className='flex justify-center items-center gap-4'>
+          <TiSocialLinkedin size={35} cursor="pointer" />
+          <SlSocialInstagram size={20} cursor="pointer" />
+          <FaFacebook size={20} cursor="pointer" />
+          <BsTwitterX size={20} cursor="pointer" />
+          <IoLogoYoutube size={20} cursor="pointer" />
+          <FaTiktok size={20} cursor="pointer" />
         </div>
       </section>
 
