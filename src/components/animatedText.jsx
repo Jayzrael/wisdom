@@ -44,7 +44,7 @@ const AnimatedText = () => {
   return (
     <div className="w-full  max-w-2xl  mx-auto p-6 rounded-md bg-slate-200 bg-opacity-20 transition-all duration-500 ease-in-out">
       <div
-        className={`flex flex-wrap items-center ${isAnimating
+        className={`max-lg:hidden flex flex-wrap items-center ${isAnimating
           ? 'justify-between' // Move words to opposite sides during animation
           : 'justify-center'   // Initial and end state, center everything
           } transition-all duration-1000 ease-in-out`}
@@ -63,6 +63,21 @@ const AnimatedText = () => {
           {/* Reduced transition time for "Happens" */}
           Happens
         </span>
+      </div>
+
+
+
+
+
+
+
+
+
+      {/* second  */}
+      <div
+        className="lg:hidden"
+      >
+        <h1 className='text-6xl font-bold text-center leading-tight'>Where <span className='text-[#9703C9] text-8xl'> Progress</span> Happens</h1>
       </div>
     </div>
   );

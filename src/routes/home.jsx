@@ -5,11 +5,9 @@ import Button from '../components/Button';
 import { RiShakeHandsLine } from 'react-icons/ri';
 import { BsFileSpreadsheet } from 'react-icons/bs';
 import { HiOutlineHome, HiOutlineShoppingCart } from 'react-icons/hi';
-import AnimatedSection from '../components/animatedSection';
 import ScrollSpyLayout from '../components/animatedSection';
 import VideoText from '../components/VideoText';
 import { CardList, VideoList } from '../components/lists';
-import VideoGallery from '../components/VideoGallery';
 import CurvedContainer from '../components/CurvedSection';
 import CardBox from '../components/card';
 
@@ -24,7 +22,7 @@ const Home = () => {
         <div>
           <Button Class="bg-[#611F69] hover:bg-[#481A54] py-4 px-10 rounded-md text-xl text-white" Text="GET STARTED" />
         </div>
-        <p className='text-xl font-semibold mb-10'>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <p className='text-xl max-lg:px-7 max-lg:text-center font-semibold mb-10'>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
       </section>
       <section className='mb-10 '>
         <div className='container flex justify-center items-center'>
@@ -54,7 +52,7 @@ const Home = () => {
           </div>
         </div>
         <div className='mt-24'>
-          <ScrollSpyLayout />
+          {/* <ScrollSpyLayout /> */}
           {VideoList.map((item) => (
             <VideoText
               title={item.title}
@@ -79,14 +77,14 @@ const Home = () => {
         <h1 className='text-black mb-10 font-bold text-3xl text-center'>Your Wisdom deep dive starts here.</h1>
         <div className='flex flex-wrap max-lg:px-10 justify-center items-center gap-7'>
           {CardList.map((data) => (
-            <CardBox title={data.title} description={data.description} />
+            <CardBox title={data.title} description={data.description} galleryUrl={data.galleryUrl} />
           ))}
         </div>
       </section>
       <section className='bg-[#4A154B] mb-40 py-24 rounded-curve-b max-lg:rounded-none'>
         <div className='flex flex-col gap-10 justify-center items-center text-white'>
           <h1 className='text-5xl font-bold mt-10 max-lg:text-center'>See all you can accomplish in Wisdom.</h1>
-          <div className='flex gap-4'>
+          <div className='flex max-lg:flex-col gap-4 max-lg:w-full max-lg:px-8'>
             <button className='bg-white text-[#4A154B] py-3 px-7'>GET STARTED</button>
             <button className='bg-transparent border-white border py-3 px-7'>CONTACT US</button>
           </div>

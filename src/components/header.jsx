@@ -73,10 +73,10 @@ const Header = () => {
       </nav>
 
       {/* Mobile Menu */}
-      <div className={`md:hidden ${isMobileMenuOpen ? 'block' : 'hidden'} bg-gray-800 mt-10 rounded-2xl pt-4`}>
-        <a href="#" className="block text-white px-8 py-2 hover:bg-[#481A54]">Home</a>
-        <a href="#" className="block text-white px-8 py-2 hover:bg-[#481A54]">About</a>
-        <a href="#" className="block text-white px-8 py-2 hover:bg-[#481A54]">Services</a>
+      <div className={`md:hidden ${isMobileMenuOpen ? 'block' : 'hidden'} bg-slate-50 border border-[#481A54] mt-10 rounded-2xl pt-4`}>
+        <a href="#" className="block text-black font-bold px-8 py-2 hover:bg-[#481A54] hover:text-white">Home</a>
+        <a href="#" className="block text-black font-bold px-8 py-2 hover:bg-[#481A54] hover:text-white">About</a>
+        <a href="#" className="block text-black font-bold px-8 py-2 hover:bg-[#481A54] hover:text-white">Services</a>
         <div className="flex justify-center space-x-4 py-4">
           <button className="bg-[#481A54] hover:bg-[#481A54] text-white px-4 py-2 rounded">
             Login

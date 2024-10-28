@@ -57,18 +57,22 @@ export const CurvedSection = [
 export const CardList = [
   {
     title: "Event",
-    description: "Ready for the future of tech in Wisdom"
+    description: "Ready for the future of tech in Wisdom",
+    galleryUrl: "/images/gal4.jpg"
   },
   {
     title: "Event",
-    description: "Ready for the future of tech in Wisdom"
+    description: "Ready for the future of tech in Wisdom",
+    galleryUrl: "/images/gal2.jpg"
   },
   {
     title: "Event",
-    description: "Ready for the future of tech in Wisdom"
+    description: "Ready for the future of tech in Wisdom",
+    galleryUrl: "/images/gal3.jpg"
   },
   {
     title: "Event",
-    description: "Ready for the future of tech in Wisdom"
+    description: "Ready for the future of tech in Wisdom",
+    galleryUrl: "/images/gal4.jpg"
   },
 ]
