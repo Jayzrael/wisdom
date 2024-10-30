@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { HiMenu, HiOutlineX } from 'react-icons/hi';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation(); // Get current path
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -15,23 +16,16 @@ const Header = () => {
   // Effect to handle scroll and change background color
   useEffect(() => {
     const handleScroll = () => {
-      // If the scroll position is greater than 50px, change background color
       if (window.scrollY > 50) {
         setBgColor("bg-slate-50");
       } else {
-        setBgColor("bg-transparent"); // Reset background color when scrolled to top
+        setBgColor("bg-transparent");
       }
     };
 
-    // Add scroll event listener
     window.addEventListener("scroll", handleScroll);
-
-    // Cleanup function to remove the event listener when component unmounts
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 ${bgColor} p-4`}>
@@ -42,18 +36,35 @@ const Header = () => {
         </div>
 
         {/* Menu Items */}
-        <div className={`hidden md:flex space-x-6 text-black text-[18px] font-semibold`}>
-          <Link to="/" className="hover:bg-[#611F69] hover:text-white px-3 py-2 rounded">Home</Link>
-          <Link to="Pricing" className="hover:bg-[#611F69] hover:text-white px-3 py-2 rounded">Pricing</Link>
-          <Link to="/" className="hover:bg-[#611F69] hover:text-white px-3 py-2 rounded">Contact Us</Link>
+        <div className="hidden md:flex space-x-6 text-black text-[18px] font-semibold">
+          <Link
+            to="/"
+            className={`px-3 py-2 rounded ${location.pathname === "/" ? "bg-[#611F69] text-white" : "hover:bg-[#611F69] hover:text-white"
+              }`}
+          >
+            Home
+          </Link>
+          <Link
+            to="/pricing"
+            className={`px-3 py-2 rounded ${location.pathname === "/pricing" ? "bg-[#611F69] text-white" : "hover:bg-[#611F69] hover:text-white"
+              }`}
+          >
+            Pricing
+          </Link>
+          <Link
+            to="/contact"
+            className={`px-3 py-2 rounded ${location.pathname === "/contact" ? "bg-[#611F69] text-white" : "hover:bg-[#611F69] hover:text-white"
+              }`}
+          >
+            Contact Us
+          </Link>
         </div>
 
         {/* Authentication Buttons */}
         <div className="hidden md:flex space-x-4">
-          <button className=" bg-transparent border border-black text-black hover:text-[#481A54] px-4 py-2 rounded"
-            style={{
-              outline: '2px solid transparent',
-            }}
+          <button
+            className="bg-transparent border border-black text-black hover:text-[#481A54] px-4 py-2 rounded"
+            style={{ outline: '2px solid transparent' }}
             onMouseEnter={(e) => (e.currentTarget.style.outline = '1px solid black')}
             onMouseLeave={(e) => (e.currentTarget.style.outline = '2px solid transparent')}
           >
@@ -74,9 +85,15 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <div className={`md:hidden ${isMobileMenuOpen ? 'block' : 'hidden'} bg-slate-50 border border-[#481A54] mt-10 rounded-2xl pt-4`}>
-        <a href="#" className="block text-black font-bold px-8 py-2 hover:bg-[#481A54] hover:text-white">Home</a>
-        <a href="#" className="block text-black font-bold px-8 py-2 hover:bg-[#481A54] hover:text-white">About</a>
-        <a href="#" className="block text-black font-bold px-8 py-2 hover:bg-[#481A54] hover:text-white">Services</a>
+        <Link to="/" className={`block text-black font-bold px-8 py-2 ${location.pathname === "/" ? "bg-[#481A54] text-white" : "hover:bg-[#481A54] hover:text-white"}`}>
+          Home
+        </Link>
+        <Link to="/pricing" className={`block text-black font-bold px-8 py-2 ${location.pathname === "/pricing" ? "bg-[#481A54] text-white" : "hover:bg-[#481A54] hover:text-white"}`}>
+          Pricing
+        </Link>
+        <Link to="/contact" className={`block text-black font-bold px-8 py-2 ${location.pathname === "/contact" ? "bg-[#481A54] text-white" : "hover:bg-[#481A54] hover:text-white"}`}>
+          Contact Us
+        </Link>
         <div className="flex justify-center space-x-4 py-4">
           <button className="bg-[#481A54] hover:bg-[#481A54] text-white px-4 py-2 rounded">
             Login
@@ -87,7 +104,7 @@ const Header = () => {
         </div>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

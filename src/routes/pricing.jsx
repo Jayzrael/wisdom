@@ -1,8 +1,19 @@
 import React from 'react'
+import Header from '../components/header'
+import PricingCard from '../components/PricingCard'
+import CallToAction from '../components/CallToAction'
+import Footer from '../components/Footer'
 
 const Pricing = () => {
   return (
-    <div>Pricing</div>
+    <main className='overflow-hidden'>
+      <Header />
+      <section>
+        <PricingCard />
+      </section>
+      <CallToAction />
+      <Footer />
+    </main>
   )
 }
 
