@@ -22,14 +22,14 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "/pricing",
+    path: "pricing",
     element: (
       <>
         <ScrollToTop />
         <Pricing />
       </>
     ),
-    // errorElement: <ErrorPage />,
+    errorElement: <ErrorPage />,
   },
 ]);
 

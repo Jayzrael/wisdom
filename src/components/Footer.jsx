@@ -7,7 +7,7 @@ import { BsTwitterX } from 'react-icons/bs';
 
 const Footer = () => {
   return (
-    <section className='flex justify-between mt-10 mb-10 px-10'>
+    <section className='flex justify-between mt-10 mb-10 max-lg:mb-10 px-10'>
       <h1 className='text-xl'>Visit our pages</h1>
       <div className='flex justify-center items-center gap-4'>
         <TiSocialLinkedin size={35} cursor="pointer" />
