@@ -12,6 +12,7 @@ import CurvedContainer from '../components/CurvedSection';
 import CardBox from '../components/card';
 import CallToAction from '../components/CallToAction';
 import Footer from '../components/Footer';
+import VideoGallery from '../components/VideoGallery';
 
 
 const Home = () => {
@@ -70,9 +71,9 @@ const Home = () => {
         </div>
       </section>
       {/* video gallery  */}
-      <section>
-        <div>
-        </div>
+      <section className='flex flex-col justify-center items-center mb-20'>
+        <h1 className='text-5xl font-bold text-center mx-64 mb-20'>The most innovative schools run their teachings through Wisdom.</h1>
+        <VideoGallery />
       </section>
       <CurvedContainer />
       <section className='mt-24 mb-24'>

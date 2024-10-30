@@ -1,32 +1,52 @@
-import React from "react";
+import React, { useState } from 'react';
+import { FaRegPlayCircle } from 'react-icons/fa';
+import { FaCirclePlay } from 'react-icons/fa6';
 
-const videos = [
-  "https://www.w3schools.com/html/mov_bbb.mp4",  // Example video URLs
-  "https://www.w3schools.com/html/movie.mp4",
-  "https://www.w3schools.com/html/mov_bbb.mp4",
-  "https://www.w3schools.com/html/movie.mp4",
+const images = [
+  { id: 1, src: "/videos/video1.mp4", alt: "Hawai" },
+  { id: 2, src: "/videos/video1.mp4", alt: "Bamboo Forest" },
+  { id: 3, src: "/videos/video1.mp4", alt: "Cappadocia" },
+  { id: 4, src: "/videos/video1.mp4", alt: "Lake Croatia" },
 ];
 
 const VideoGallery = () => {
+  // Set the first image as expanded by default
+  const [activeImage, setActiveImage] = useState(images[0].id);
+
+  // Event handler for mouse enter
+  const handleMouseEnter = (id) => {
+    setActiveImage(id);
+  };
+
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-4">
-      {videos.map((videoUrl, index) => (
+    <section className="flex space-x-2">
+      {images.map((image) => (
         <div
-          key={index}
-          className="relative overflow-hidden rounded-lg shadow-lg transition-all duration-500 transform hover:scale-105 hover:w-[300px] hover:h-[180px] w-[180px] h-[300px]"
+          key={image.id}
+          className={`relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-100 ease-in-out 
+            ${activeImage === image.id ? 'w-[600px]' : 'w-[200px]'} h-[340px]`}
+          onMouseEnter={() => handleMouseEnter(image.id)}
         >
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-black opacity-50 rounded-2xl"></div>
+
           <video
-            src={videoUrl}
-            className="w-full h-full object-cover"
-            controls={false}
+            src={image.src}
+            autoPlay
             muted
             loop
-            autoPlay
-            playsInline
+            className="w-full h-full object-cover rounded-2xl"
           />
+          <span className="absolute inset-0 flex items-center px-4 justify-between text-2xl text-white font-bold transition-opacity duration-300 z-10">
+            {image.alt}
+            <a href='http://youtube.com' target='blank'>
+              <FaCirclePlay size={40} color='black' className='bg-[#611F69] rounded-full' />
+            </a>
+          </span>
+
         </div>
       ))}
-    </div>
+    </section>
   );
 };
 
