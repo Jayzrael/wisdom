@@ -64,6 +64,7 @@ const VideoGallery = () => {
               autoPlay
               muted
               loop
+              preload='auto'
               className="w-full h-full object-cover rounded-2xl"
             />
             <span className="absolute inset-0 flex items-center px-4 justify-between text-2xl text-white font-bold transition-opacity duration-300 z-10">
