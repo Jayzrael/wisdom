@@ -72,7 +72,7 @@ const Home = () => {
       </section>
       {/* video gallery  */}
       <section className='flex flex-col justify-center items-center mb-20'>
-        <h1 className='text-5xl font-bold text-center mx-64 mb-20'>The most innovative schools run their teachings through Wisdom.</h1>
+        <h1 className='text-4xl max-lg:w-full max-xl:text-3xl font-bold text-center mx-64 mb-20'>The most innovative schools run their teachings through Wisdom.</h1>
         <VideoGallery />
       </section>
       <CurvedContainer />
