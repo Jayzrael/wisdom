@@ -8,16 +8,27 @@ import './index.css'
 import Home from './routes/home.jsx';
 import ErrorPage from './error-page.jsx';
 import Pricing from './routes/pricing.jsx';
+import ScrollToTop from './components/ScrollToTop.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: (
+      <>
+        <ScrollToTop />
+        <Home />
+      </>
+    ),
     errorElement: <ErrorPage />,
   },
   {
     path: "/pricing",
-    element: <Pricing />,
+    element: (
+      <>
+        <ScrollToTop />
+        <Pricing />
+      </>
+    ),
     // errorElement: <ErrorPage />,
   },
 ]);
