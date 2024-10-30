@@ -9,6 +9,7 @@ import Home from './routes/home.jsx';
 import ErrorPage from './error-page.jsx';
 import Pricing from './routes/pricing.jsx';
 import ScrollToTop from './components/ScrollToTop.jsx';
+import Contact from './routes/Contact.jsx';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,16 @@ const router = createBrowserRouter([
       <>
         <ScrollToTop />
         <Pricing />
+      </>
+    ),
+    // errorElement: <ErrorPage />,
+  },
+  {
+    path: "/contact",
+    element: (
+      <>
+        <ScrollToTop />
+        <Contact />
       </>
     ),
     // errorElement: <ErrorPage />,

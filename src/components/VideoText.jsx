@@ -16,7 +16,7 @@ const VideoText = ({ title, percent, text1, text2, text3, bgcolor, videoUrl, rev
       >
         {/* <div className={`absolute w-[65%] h-[90vh] ml-auto rounded-curve-2 inset-0 ${bgcolor} -z-10 mt-10`}></div> */}
         {/* Render VideoDisplay component and pass the active section */}
-        <video src={videoUrl} autoPlay muted loop width={600} className='rounded-[10px]'></video>
+        <video src={videoUrl} autoPlay muted loop width={600} preload='auto' className='rounded-[10px]'></video>
       </div>
     </section>
   )

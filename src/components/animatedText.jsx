@@ -77,7 +77,7 @@ const AnimatedText = () => {
       <div
         className="lg:hidden"
       >
-        <h1 className='text-6xl font-bold text-center leading-tight'>Where <span className='text-[#9703C9] text-8xl'> Progress</span> Happens</h1>
+        <h1 className='text-6xl font-bold text-center leading-tight'>Where <span className='text-[#9703C9] text-7xl'> Progress</span> Happens</h1>
       </div>
     </div>
   );

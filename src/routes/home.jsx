@@ -33,7 +33,7 @@ const Home = () => {
       </section>
       <section className='rounded-curve mt-[-150px]  bg-slate-50 pt-[200px] '>
         <div className='container flex gap-10 flex-col justify-center items-center'>
-          <h1 className='text-center font-bold text-5xl max-lg:text-2xl'>Lorem ipsum dolor sit amet  Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+          <h1 className='text-center font-bold text-5xl max-lg:text-2xl max-md:px-8'>Lorem ipsum dolor sit amet  Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
           <div className='flex gap-10 flex-wrap justify-center'>
             <span className='flex justify-center items-center gap-3'>
               <RiShakeHandsLine size={30} />
