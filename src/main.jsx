@@ -52,7 +52,6 @@ const router = createBrowserRouter([
         <SignUp />
       </>
     ),
-    // errorElement: <ErrorPage />,
   },
   {
     path: "/signin",
