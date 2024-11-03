@@ -12,7 +12,6 @@ const CardBox = ({ title, description, galleryUrl }) => {
             alt="card-image"
             // width={200}
             className='max-lg:w-full w-[100%]'
-            loading='lazy'
 
           />
         </CardHeader>

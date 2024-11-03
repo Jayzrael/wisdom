@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { HiMenu, HiOutlineX } from 'react-icons/hi';
 import { Link, useLocation } from 'react-router-dom';
+import SignIn from '../routes/signin';
+import SignUp from '../routes/SignUp';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -62,17 +64,21 @@ const Header = () => {
 
         {/* Authentication Buttons */}
         <div className="hidden md:flex space-x-4">
-          <button
-            className="bg-transparent border border-black text-black hover:text-[#481A54] px-4 py-2 rounded"
-            style={{ outline: '2px solid transparent' }}
-            onMouseEnter={(e) => (e.currentTarget.style.outline = '1px solid black')}
-            onMouseLeave={(e) => (e.currentTarget.style.outline = '2px solid transparent')}
-          >
-            Login
-          </button>
-          <button className="bg-[#611F69] hover:bg-[#481A54] hover:text-white text-white px-4 py-2 rounded">
-            Register
-          </button>
+          <Link to="/signin">
+            <button
+              className="bg-transparent border border-black text-black hover:text-[#481A54] px-4 py-2 rounded"
+              style={{ outline: '2px solid transparent' }}
+              onMouseEnter={(e) => (e.currentTarget.style.outline = '1px solid black')}
+              onMouseLeave={(e) => (e.currentTarget.style.outline = '2px solid transparent')}
+            >
+              Login
+            </button>
+          </Link>
+          <Link to="/signup">
+            <button className="bg-[#611F69] hover:bg-[#481A54] hover:text-white text-white px-4 py-2 rounded">
+              Register
+            </button>
+          </Link>
         </div>
 
         {/* Hamburger Menu Icon */}
@@ -95,12 +101,16 @@ const Header = () => {
           Contact Us
         </Link>
         <div className="flex justify-center space-x-4 py-4">
-          <button className="bg-[#481A54] hover:bg-[#481A54] text-white px-4 py-2 rounded">
-            Login
-          </button>
-          <button className="bg-[#481A54] hover:bg-[#481A54] text-white px-4 py-2 rounded">
-            Register
-          </button>
+          <Link to="/SignIn">
+            <button className="bg-[#481A54] hover:bg-[#481A54] text-white px-4 py-2 rounded">
+              Login
+            </button>
+          </Link>
+          <Link to="/SignUp">
+            <button className="bg-[#481A54] hover:bg-[#481A54] text-white px-4 py-2 rounded">
+              Register
+            </button>
+          </Link>
         </div>
       </div>
     </header>
