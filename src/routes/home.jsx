@@ -5,7 +5,7 @@ import Button from '../components/Button';
 import { RiShakeHandsLine } from 'react-icons/ri';
 import { BsFileSpreadsheet } from 'react-icons/bs';
 import { HiOutlineHome, HiOutlineShoppingCart } from 'react-icons/hi';
-import ScrollSpyLayout from '../components/animatedSection';
+// import ScrollSpyLayout from '../components/animatedSection';
 import VideoText from '../components/VideoText';
 import { CardList, VideoList } from '../components/lists';
 import CurvedContainer from '../components/CurvedSection';
